@@ -1,3 +1,4 @@
+/* SECTIONS ----------- */
 body {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 14px;
@@ -5,6 +6,26 @@ body {
 	color: grey;
 	background-color: white;
 }
+.container {
+	margin-right: auto;
+	margin-left: auto;
+}
+img.img-responsive {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 20px;
+	width:100%;
+}
+.jumbotron {
+	font-size: 21px;
+	font-weight: 200;
+	color: inherit;
+	background-color: #D2E4D2;
+}
+
+
+/* BUTTONS ----------- */
 .btn {
 	display: inline-block;
 	padding: 6px 12px;
@@ -31,6 +52,7 @@ body {
 }
 .btn:hover,
 .btn:focus {
+	background-color:green;
 	color: #006600;
 	text-decoration: none;
 }
@@ -40,83 +62,135 @@ body {
 	border-color: #4cae4c;
 }
 
-/* Smartphones (landscape) ----------- */
+/* CIRCLES ----------- */
+svg {
+	height: 200px;
+}
+circle {
+	background: #5cb85c;
+}
+circle:hover {
+	background: green;
+}
+.row1 {
+	cy:20%;
+}
+
+circle {
+	position: relative;
+	border-radius: 50%;
+	width: 100%;
+	height: auto;
+	padding-top: 100%;
+	background: green;
+}
+
+.blobs {
+	display: block;
+	width: 5%;
+	border-radius: 66px;
+	border: 5px double #ccc;
+	background: #5cb85c;
+}
+
+.blobs:hover {
+	border: 5px double #bbb;
+	color: #aaa;
+	background: green;
+}
+
+/* RESPONSIVE ----------- */
+/* Smartphones (portrait and landscape) ----------- */
 @media only screen 
-and (min-width : 321px)
-and (max-width: 923px) {
-/* Styles */
+and (min-width : 320px) 
+and (max-width : 480px) {
 	body {
 		padding-bottom:20px;
-		padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
-	}
-	img.img-responsive {
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-		padding-top: 20px;
-		width:100%;
+		padding-top: 0px; /* 60px to make the container go all the way to the bottom of the topbar */
 	}
 	.jumbotron {
-		padding: 15px;
+		padding: 20px;
 		margin-bottom: 30px;
-		font-size: 21px;
-		font-weight: 200;
-		line-height: 2.1428571435;
-		color: inherit;
-		background-color: #D2E4D2;
+		font-size: 18px;
+		line-height: 1.3;
 	}
 	.container {
-		margin-right: auto;
-		margin-left: auto;
-		padding-left: 10px;
-		padding-right: 10px;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	
+	svg {
+		height: 100px;
 	}
 }
 
-
-
-/* Desktops and laptops ----------- */
-@media only screen 
-and (min-width : 924px) {
+@media only screen
+and (min-width : 481px)
+and (max-width : 767) {
 	body {
-		padding-left: 20%;
-		padding-right:20%;
-		padding-bottom:60px;
-		padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
-	}
-	img.img-responsive {
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-		padding-top: 30px;
-		width:100%;
+		padding-bottom:20px;
+		padding-top: 0px; /* 60px to make the container go all the way to the bottom of the topbar */
 	}
 	.jumbotron {
 		padding: 30px;
 		margin-bottom: 30px;
-		font-size: 21px;
-		font-weight: 200;
-		line-height: 2.1428571435;
-		color: inherit;
-		background-color: #D2E4D2;
+		font-size: 22px;
+		line-height: 1.7;
 	}
 	.container {
-		margin-right: auto;
-		margin-left: auto;
 		padding-left: 15px;
 		padding-right: 15px;
+	}
+	
+	svg {
+		height: 150px;
+	}
+}
+
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 1024px) {
+	body {
+		margin-left: 20%;
+		margin-right: 20%;
+		padding-bottom:60px;
+		padding-top: 0px; /* 60px to make the container go all the way to the bottom of the topbar */
+	}
+	.jumbotron {
+		padding: 30px;
+		margin-bottom: 30px;
+		line-height: 2.1428571435;
+	}
+	.container {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1023px) {
+	body {
+		margin-left: 20%;
+		margin-right: 20%;
+		padding-bottom:60px;
+		padding-top: 0px; /* 60px to make the container go all the way to the bottom of the topbar */
+	}
+	.jumbotron {
+		padding: 30px;
+		margin-bottom: 30px;
+		line-height: 2.1428571435;
+	}
+	.container {
+		padding: 50px;
 	}
 }
 
 /* Large screens ----------- */
 @media only screen 
 and (min-width : 1824px) {
-/* Styles */
-}
-
-/* iPhone 4 ----------- */
-@media
-only screen and (-webkit-min-device-pixel-ratio : 1.5),
-only screen and (min-device-pixel-ratio : 1.5) {
 /* Styles */
 }
