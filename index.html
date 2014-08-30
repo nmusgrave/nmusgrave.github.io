@@ -1,112 +1,44 @@
-<html lang="en">
+<!doctype html>
+<html class="no-js">
   <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="bootstrap-3.2.0-dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body ng-app="ngPersonalSiteApp">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <!-- App content -->
+    <div class="container">
+      <!-- header -->
+      <div id="header" ng-include="'views/header.html'"></div>
 
-	<meta charset="utf-8">
-	<title>Naomi Musgrave Portfolio</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Portfolio showcasing the code, photography, and film projects of Naomi Musgrave">
-	<meta name="author" content="Naomi Musgrave">
-	
-	<link href="css/layout.css" rel="stylesheet">
-	  
-	</head>
-	
-	<body>
-	
-		<svg width="100%">
-			<circle cx="93%" cy="20%" r="5%" fill="green" />
-			<circle cx="85%" cy="20%" r="5%" fill="green" />
-			<circle cx="77%" cy="20%" r="5%" fill="green" />
-			<circle cx="69%" cy="20%" r="5%" fill="green" />
-			<circle cx="61%" cy="20%" r="5%" fill="green" />
-			<circle cx="53%" cy="20%" r="5%" fill="green" />
-			<circle cx="45%" cy="20%" r="5%" fill="green" />
-			<circle cx="37%" cy="20%" r="5%" fill="green" />
-			<circle cx="29%" cy="20%" r="5%" fill="green" />
-			<circle cx="21%" cy="20%" r="5%" fill="green" />
-			<circle cx="13%" cy="20%" r="5%" fill="green" />
-			<circle cx="05%" cy="20%" r="5%" fill="green" />
+      <!-- body -->
+      <div ng-view></div>
+      
+      <!-- footer -->
+      <div class="footer" id="footer" ng-include="'views/footer.html'"></div>
+    </div>
+      
 
-			<circle cx="93%" cy="50%" r="5%" fill="green" />
-			<circle cx="85%" cy="50%" r="5%" fill="green" />
-			<circle cx="77%" cy="50%" r="5%" fill="green" />
-			<circle cx="69%" cy="50%" r="5%" fill="green" />
-			<circle cx="61%" cy="50%" r="5%" fill="green" />
-			<circle cx="53%" cy="50%" r="5%" fill="green" />
-			<circle cx="45%" cy="50%" r="5%" fill="green" />
-			<circle cx="37%" cy="50%" r="5%" fill="green" />
-			<circle cx="29%" cy="50%" r="5%" fill="green" />
-			<circle cx="21%" cy="50%" r="5%" fill="green" />
-			<circle cx="13%" cy="50%" r="5%" fill="green" />
-			<circle cx="05%" cy="50%" r="5%" fill="green" />
+    <!--[if lt IE 9]>
+    <script src="scripts/vendor/es5-shim.js"></script>
+    <script src="scripts/vendor/json3.js"></script>
+    <![endif]-->
 
-			<circle cx="93%" cy="80%" r="5%" fill="green" />
-			<circle cx="85%" cy="80%" r="5%" fill="green" />
-			<circle cx="77%" cy="80%" r="5%" fill="green" />
-			<circle cx="69%" cy="80%" r="5%" fill="green" />
-			<circle cx="61%" cy="80%" r="5%" fill="green" />
-			<circle cx="53%" cy="80%" r="5%" fill="green" />
-			<circle cx="45%" cy="80%" r="5%" fill="green" />
-			<circle cx="37%" cy="80%" r="5%" fill="green" />
-			<circle cx="29%" cy="80%" r="5%" fill="green" />
-			<circle cx="21%" cy="80%" r="5%" fill="green" />
-			<circle cx="13%" cy="80%" r="5%" fill="green" />
-			<circle cx="05%" cy="80%" r="5%" fill="green" />
-		</svg>
-
-		<div class="jumbotron">
-			<div class="container">
-				<h1>Hey there.</h1>
-				<p>Nice to meet you. I'm Naomi Musgrave. I'm studying Computer Science at the
-				University of Washington, and expect to graduate in 2016.</p>
-				<p>On the side, I am a freelance concert photographer. My images have been 
-				published in UW advertising materials, and used by Seattle area bands on their
-				social media pages.</p>
-
-				<a type="button" class="btn btn-success" href="http://www.linkedin.com/in/naomimusgrave
-				">LinkedIn</a>
-				<a type="button" class="btn btn-success" href="https://github.com/nmusgrave">Github</a>
-				<a href="http://instagram.com/giltlens" type="button" class="btn btn-success">Instagram</a>
-			</div>
-		</div>
-
-		<img src="photo/IMG_1610fameriot.JPG" class="img-responsive" alt="The Fame Riot, UW Tacoma, Spring 2013">
-		<img src="photo/IMG_1760.JPG" class="img-responsive" >
-		<img src="photo/IMG_7212maiahmanser.jpg" class="img-responsive" alt="Maiah Manser, Chop Suey, Spring 2013" >
-		<!--
-		<table cols="2" width="100%" align="center">
-			<tr><td>
-			<img src="photo/IMG_9576.JPG" class="img-responsive" alt="Mudhoney, Mural Ampitheater, Summer 2013"">
-			</td> <td>
-			<img src="photo/IMG_9537.JPG" class="img-responsive" alt="The Grizzled Mighty, Mural Ampitheater, Summer 2013">
-			</td> </tr> 
-
-			<tr> <td>
-			<img src="photo/IMG_7212.jpg" class="img-responsive" alt="Maiah Manser, Chop Suey, Spring 2013" >
-			</td> <td>
-			<img src="photo/IMG_7068.jpg" class="img-responsive" alt="Maiah Manser, Chop Suey, Spring 2013" >
-			</td> </tr>
-
-			<tr> <td>
-			<img src="photo/IMG_2561.jpg" class="img-responsive" alt="Ben Union, UW Tacoma, Spring 2013" >
-			</td> <td>
-			<img src="photo/IMG_0583.jpg" class="img-responsive" alt="Joe Brooks, El Corazon, 2013" >
-			</td> </tr>
-
-			<tr><td>
-			<img src="photo/IMG_7395.jpg" class="img-responsive" alt="As It Starts, EMP, Winter 2013" >
-			</td> <td>
-			<img src="photo/IMG_6623.jpg" class="img-responsive" alt="The Fame Riot, EMP, Winter 2013">
-			</td> </tr>
-
-			<tr><td>
-			<img src="photo/IMG_6466.jpg" class="img-responsive" alt="The Fame Riot, EMP, Winter 2013" >
-			</td> <td>
-			<img src="photo/IMG_6317.jpg" class="img-responsive" alt="The Fame Riot, EMP, Winter 2013" >
-			</td> </tr>
-
-		</table>
-		--!>
-
-	</body>
+    <!-- Supporting scripts -->
+    <script src="scripts/vendor/angular.js"></script>
+    <script src="scripts/vendor/angular-route.js"></script>
+    <script src="scripts/vendor/jquery.js"></script>
+    <script src="bootstrap-3.2.0-dist/js/bootstrap.js"></script>
+    
+    <!-- Controllers -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/about.js"></script>
+</body>
 </html>
