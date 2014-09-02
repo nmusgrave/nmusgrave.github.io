@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-md-7">
+        <h3>{{weather.location.city}}</h3>
+        <h4>{{weather.item.condition.temp}}, {{weather.item.condition.text}}</h4>
+        <p>
+            <span class="glyphicon glyphicon-chevron-up"></span> {{weather.astronomy.sunrise}}
+            <span class="glyphicon glyphicon-chevron-down"></span> {{weather.astronomy.sunset}}
+        </p>
+    </div>
+    <div class="col-md-5">
+        <div class="row" ng-repeat="day in weather.item.forecast">
+            <div class="col-md-3">{{day.day}}</div>
+            <div class="col-md-4">{{day.low}} - {{day.high}}</div>
+            <div class="col-md-5">{{day.text}}</div>
+        </div>
+    </div>
+</div>
+<hr />
+<h3>WSJ Tech</h3>
+<div class="well" ng-repeat="entry in wsj">
+    <a href="{{entry.link}}" target="_blank"><h4>{{entry.title}}</h4></a>
+    <p>{{entry.contentSnippet}}</p>
+</div>

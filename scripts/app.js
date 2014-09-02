@@ -1,29 +1,24 @@
-'use strict';
+var personalSiteApp = angular.module('personalSiteApp', ['ngRoute']);
 
-/**
- * @ngdoc overview
- * @name ngPersonalSiteApp
- * @description
- * # ngPersonalSiteApp
- *
- * Main module of the application.
- */
-angular
-  .module('ngPersonalSiteApp', [
-    'ngRoute'
-  ]).config(function($routeProvider) {
-    $routeProvider
+// configure routes
+personalSiteApp.config(function($routeProvider) {
+  $routeProvider
+
+    // route for the home page
     .when('/', {
-        templateUrl: 'views/main.html',
-        Controller: 'MainCtrl'
+            templateUrl : 'views/main.html',
+            controller  : 'mainController'
     })
+
+    // route for the about page
     .when('/about', {
-        templateUrl: 'views/about.html',
-        Controller: 'AboutCtrl'
+            templateUrl : 'views/about.html',
+            controller  : 'aboutController'
     })
-    .otherwise( {
-        redirectTo: '/'
-    } )
-            
-  }
-);
+    
+     // route for the about page
+    .when('/dashboard', {
+            templateUrl : 'views/dashboard.html',
+            controller  : 'dashboardController'
+    })
+});
