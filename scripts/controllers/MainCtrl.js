@@ -4,8 +4,8 @@ personalSiteApp.controller('mainController', function($scope) {
   $scope.message = 'Welcome';
   
   $scope.dir = 'images';
-  $scope.horizontal = [ 'gorgeB&W.jpg','IMG_4029.JPG' ];
-  $scope.vertical = [ 'road.jpg', 'trees.jpg', 'IMG_3722.JPG', 'IMG_4027.JPG' ];
+  $scope.horizontal = [ 'gorgeB&W.jpg','IMG4029.JPG' ];
+  $scope.vertical = [ 'road.jpg', 'trees.jpg', 'IMG3722.JPG', 'IMG4027.JPG' ];
 
   var init = function() {
     
