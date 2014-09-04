@@ -4,21 +4,32 @@ var personalSiteApp = angular.module('personalSiteApp', ['ngRoute']);
 personalSiteApp.config(function($routeProvider) {
   $routeProvider
 
-    // route for the home page
     .when('/', {
             templateUrl : 'views/main.html',
             controller  : 'mainController'
     })
-
-    // route for the about page
     .when('/about', {
             templateUrl : 'views/about.html',
             controller  : 'aboutController'
     })
-    
-     // route for the about page
     .when('/dashboard', {
             templateUrl : 'views/dashboard.html',
             controller  : 'dashboardController'
+    })
+    .when('/picsSeattle', {
+            templateUrl : 'views/picsSeattle.html',
+           // controller  : 'dashboardController'
+    })
+    .when('/picsOregon', {
+            templateUrl : 'views/picsOregon.html',
+           // controller  : 'dashboardController'
+    })
+    .when('/picsMusic', {
+            templateUrl : 'views/picsMusic.html',
+           // controller  : 'dashboardController'
+    })
+    .when('/picsProcessing', {
+            templateUrl : 'views/picsProcessing.html',
+           // controller  : 'dashboardController'
     })
 });
