@@ -17,19 +17,19 @@ personalSiteApp.config(function($routeProvider) {
             controller  : 'dashboardController'
     })
     .when('/picsSeattle', {
-            templateUrl : 'views/picsSeattle.html',
-           // controller  : 'dashboardController'
+            templateUrl : 'views/picsTemplate.html',
+            controller  : 'picSeattleController'
     })
     .when('/picsOregon', {
-            templateUrl : 'views/picsOregon.html',
-           // controller  : 'dashboardController'
+            templateUrl : 'views/picsTemplate.html',
+            controller  : 'picOregonController'
     })
     .when('/picsMusic', {
-            templateUrl : 'views/picsMusic.html',
-           // controller  : 'dashboardController'
+            templateUrl : 'views/picsTemplate.html',
+            controller  : 'picMusicController'
     })
     .when('/picsProcessing', {
-            templateUrl : 'views/picsProcessing.html',
+            templateUrl : 'views/picsTemplate.html',
             controller  : 'picProcController'
     })
 });
