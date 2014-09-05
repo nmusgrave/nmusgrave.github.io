@@ -1,4 +1,4 @@
-var personalSiteApp = angular.module('personalSiteApp', ['ngRoute']);
+var personalSiteApp = angular.module('personalSiteApp', ['ngRoute', 'ui.bootstrap']);
 
 // configure routes
 personalSiteApp.config(function($routeProvider) {
@@ -30,6 +30,6 @@ personalSiteApp.config(function($routeProvider) {
     })
     .when('/picsProcessing', {
             templateUrl : 'views/picsProcessing.html',
-           // controller  : 'dashboardController'
+            controller  : 'picProcController'
     })
 });

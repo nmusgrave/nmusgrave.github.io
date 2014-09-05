@@ -1,6 +1,11 @@
 /* Space out content a bit */
+html {
+  height: 100%
+}
+
 body {
   padding-bottom: 20px;
+  min-height: 100%
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -31,7 +36,18 @@ body {
 }
 
 img {
-  padding-top: 20px
+  padding-top: 20px;
+  max-width: 100%;
+  height: auto;
+  width: auto\9; /* ie8 */
+}
+
+.tile {
+  position: relative;
+  margin: 5px;
+  height: 100px;
+  cursor: pointer;
+  float: left
 }
 
 /* Customize container */

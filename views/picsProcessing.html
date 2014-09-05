@@ -1,1 +1,15 @@
-<h1>no pics yet</h1>
+<div class="row">
+  <div class="col-md-8">
+    <img src="{{photoDir}}/{{current}}" style="max-width:100%; max-height:80%">
+  </div>
+  <div class="col-md-4">
+    <div class="row" style="height:200px">
+      <div class="col-md-3" ng-repeat="link in horizontal">
+        <img src="{{iconDir}}/{{link}}" class="tile" ng-click="setLink(link)">
+      </div>
+      <div class="col-md-3" ng-repeat="link in vertical">
+        <img src="{{iconDir}}/{{link}}" class="tile" ng-click="setLink(link)">
+      </div>
+    </div>
+  </div>
+</div>
