@@ -11,17 +11,17 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
   </head>
-  <body ng-app="personalSiteApp">
+  <body class="gradient" ng-app="personalSiteApp">
     
     <!-- header -->
-      <div id="header" ng-include="'views/header.html'"></div>
+    <div id="header" ng-include="'views/header.html'"></div>
 
     <div class="container">
       <!-- body -->
-      <div ng-view></div>
+      <div ng-view class="wrapper"></div>
       
       <!-- footer -->
-      <div class="footer" id="footer" ng-include="'views/footer.html'"></div>
+      <div class="footer navbar-static-bottom" id="footer" ng-include="'views/footer.html'"></div>
     </div>
     
      <!-- Supporting scripts -->
