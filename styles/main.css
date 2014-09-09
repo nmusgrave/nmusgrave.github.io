@@ -96,6 +96,12 @@ img {
   border: 0;
 }
 
+.table-borderless td {
+  padding:10px;
+  vertical-align: top;
+  border: 0;
+}
+
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
