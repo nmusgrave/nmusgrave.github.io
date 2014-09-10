@@ -9,8 +9,8 @@ personalSiteApp.config(function($routeProvider) {
             controller  : 'mainController'
     })
     .when('/about', {
-            templateUrl : 'views/about.html',
-            controller  : 'aboutController'
+            templateUrl : 'views/honorsPortfolio.html',
+           // controller  : 'aboutController'
     })
     .when('/dashboard', {
             templateUrl : 'views/dashboard.html',
