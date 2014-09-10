@@ -3,7 +3,7 @@ personalSiteApp.controller('picMusicController', function($scope) {
   // create a message to display in our view
   
   $scope.photoDir = 'images/music';
-  $scope.iconDir = 'images/music';
+  $scope.iconDir = 'icons/music';
   $scope.pics = [ 'fameriot.jpg','maiahmanser.jpg', 'music1.jpg', 'grizzledmighty.jpg' ];
   
   $scope.setLink = function(link) {

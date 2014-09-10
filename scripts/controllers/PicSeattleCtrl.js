@@ -3,7 +3,7 @@ personalSiteApp.controller('picSeattleController', function($scope) {
   // create a message to display in our view
   
   $scope.photoDir = 'images/seattle';
-  $scope.iconDir = 'images/seattle';
+  $scope.iconDir = 'icons/seattle';
   $scope.pics = [ 'candy.jpg', 'metal.jpg', 'paper.jpg', 'skyline.jpg' ];
   
   $scope.setLink = function(link) {
