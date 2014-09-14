@@ -1,3 +1,5 @@
+    
+
 <div class="row">
     <div class="col-md-7">
         <h3>{{weather.location.city}}</h3>
@@ -16,8 +18,24 @@
     </div>
 </div>
 <hr />
-<h3>WSJ Tech</h3>
-<div class="well" ng-repeat="entry in wsj">
-    <a href="{{entry.link}}" target="_blank"><h4>{{entry.title}}</h4></a>
-    <p>{{entry.contentSnippet}}</p>
+
+<div class="row">
+    <div class="col-md-3">
+        <div ng-repeat="feed in feeds">
+            <div class="tile" ng-click="switchFeed(feed.URL)" >
+                <p class="tileTitle">
+                    <strong>{{feed.Source}}</strong>   {{feed.Category}}
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-9">
+        <ul class="scroller" scroller="" loading-method="loadMore()" ng-if="!loading">
+            <li data-ng-repeat="entry in items">
+                <a href="{{entry.link}}" target="_blank"><h4>{{entry.title}}</h4></a>
+                <p>{{entry.age}}</p>
+                <p>{{entry.contentSnippet}}</p>
+            </li>
+        </ul>
+    </div>
 </div>

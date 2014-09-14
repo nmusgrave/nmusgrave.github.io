@@ -1,4 +1,4 @@
-var personalSiteApp = angular.module('personalSiteApp', ['ngRoute', 'ui.bootstrap']);
+var personalSiteApp = angular.module('personalSiteApp', ['ngRoute', 'ui.bootstrap', 'lrInfiniteScroll']);
 
 // configure routes
 personalSiteApp.config(function($routeProvider) {
@@ -32,4 +32,23 @@ personalSiteApp.config(function($routeProvider) {
             templateUrl : 'views/picsTemplate.html',
             controller  : 'picProcController'
     })
+});
+
+//http://akashagrawal.me/blog/2014/01/31/infinite-scroller-in-angularjs/
+personalSiteApp.directive('scroller', function () {
+    return {
+        //restrict: 'A',
+        // new
+        scope: {
+            loadingMethod: "&"
+        },
+        link: function (scope, element, attrs) {
+            rawElement = element[0];
+            element.bind('scroll', function () {
+                if((rawElement.scrollTop + rawElement.offsetHeight+5) >= rawElement.scrollHeight){
+                    scope.$apply(scope.loadingMethod); //new
+                }
+            });
+        }
+    };
 });
