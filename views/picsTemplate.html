@@ -1,10 +1,10 @@
-<div class="row">
-  <div class="col-md-8">
+<div class="sidePadding row">
+  <div class="col-sm-7">
     <img src="{{photoDir}}/{{current}}" class="img-large">
   </div>
-  <div class="col-md-4">
+  <div class="col-sm-5">
     <div class="row">
-      <div class="col-md-4" ng-repeat="link in pics">
+      <div ng-repeat="link in pics" class="col-md-4" style="width:150px">
         <img src="{{iconDir}}/{{link}}" class="tile" ng-click="setLink(link)">
       </div>
     </div>

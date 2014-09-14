@@ -1,72 +1,72 @@
-    
-
-<div class="row">
-    <div class="col-xs-4">
-        <h3>{{weather.location.city}}</h3>
-        <h4>{{weather.item.condition.temp}}, {{weather.item.condition.text}}</h4>
-        <p>
-            <span class="glyphicon glyphicon-chevron-up"></span> {{weather.astronomy.sunrise}}
-            <span class="glyphicon glyphicon-chevron-down"></span> {{weather.astronomy.sunset}}
-        </p>
-    </div>
-    <div class="col-xs-6">
-        <div class="row" ng-repeat="day in weather.item.forecast">
-            <div class="col-xs-3">{{day.day}}</div>
-            <div class="col-xs-4">{{day.low}} - {{day.high}}</div>
-            <div class="col-xs-5">{{day.text}}</div>
+<div class="sidePadding">
+    <div class="row">
+        <div class="col-xs-4">
+            <h3>{{weather.location.city}}</h3>
+            <h4>{{weather.item.condition.temp}}, {{weather.item.condition.text}}</h4>
+            <p>
+                <span class="glyphicon glyphicon-chevron-up"></span> {{weather.astronomy.sunrise}}
+                <span class="glyphicon glyphicon-chevron-down"></span> {{weather.astronomy.sunset}}
+            </p>
+        </div>
+        <div class="col-xs-6">
+            <div class="row" ng-repeat="day in weather.item.forecast">
+                <div class="col-xs-2">{{day.day}}</div>
+                <div class="col-xs-5">{{day.low}} - {{day.high}}</div>
+                <div class="col-xs-5">{{day.text}}</div>
+            </div>
         </div>
     </div>
+    <hr />
+    
+    
+    <div class="btn-group">
+      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        WSJ <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu dropItems" role="menu">
+        <li ng-repeat="item in wsj"><a ng-click="switchFeed(item.URL)">{{item.Category}}</a></li>    
+      </ul>
+    </div>
+    
+    <div class="btn-group">
+      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        The Stranger <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu dropItems" role="menu">
+        <li ng-repeat="item in theStranger"><a ng-click="switchFeed(item.URL)">{{item.Category}}</a></li>    
+      </ul>    
+    </div>
+    
+    <div class="btn-group">
+      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        Seattle Times <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu dropItems" role="menu">
+        <li ng-repeat="item in seattleTimes"><a ng-click="switchFeed(item.URL)">{{item.Category}}</a></li>    
+      </ul>
+    </div>
+    
+    <div class="btn-group">
+      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        Wired<span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu dropItems" role="menu">
+        <li ng-repeat="item in wired"><a ng-click="switchFeed(item.URL)">{{item.Category}}</a></li>    
+      </ul>
+    </div>
+    
+    <div class="btn-group">
+      <button type="button" class="btn btn-default dropdown-toggle" ng-click="switchFeed(techCrunch.URL)">
+        TechCrunch
+      </button>
+    </div>
+    
+    
+    <ul class="scroller" scroller="" loading-method="loadMore()" ng-if="!loading">
+        <li data-ng-repeat="entry in items">
+            <a href="{{entry.link}}" target="_blank"><h4>{{entry.title}}</h4></a>
+            <p>{{entry.age}}</p>
+            <p>{{entry.contentSnippet}}</p>
+        </li>
+    </ul>
 </div>
-<hr />
-
-
-<div class="btn-group">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-    WSJ <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu dropItems" role="menu">
-    <li ng-repeat="item in wsj"><a ng-click="switchFeed(item.URL)">{{item.Category}}</a></li>    
-  </ul>
-</div>
-
-<div class="btn-group">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-    The Stranger <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu dropItems" role="menu">
-    <li ng-repeat="item in theStranger"><a ng-click="switchFeed(item.URL)">{{item.Category}}</a></li>    
-  </ul>    
-</div>
-
-<div class="btn-group">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-    Seattle Times <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu dropItems" role="menu">
-    <li ng-repeat="item in seattleTimes"><a ng-click="switchFeed(item.URL)">{{item.Category}}</a></li>    
-  </ul>
-</div>
-
-<div class="btn-group">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-    Wired<span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu dropItems" role="menu">
-    <li ng-repeat="item in wired"><a ng-click="switchFeed(item.URL)">{{item.Category}}</a></li>    
-  </ul>
-</div>
-
-<div class="btn-group">
-  <button type="button" class="btn btn-default dropdown-toggle" ng-click="switchFeed(techCrunch.URL)">
-    TechCrunch
-  </button>
-</div>
-
-
-<ul class="scroller" scroller="" loading-method="loadMore()" ng-if="!loading">
-    <li data-ng-repeat="entry in items">
-        <a href="{{entry.link}}" target="_blank"><h4>{{entry.title}}</h4></a>
-        <p>{{entry.age}}</p>
-        <p>{{entry.contentSnippet}}</p>
-    </li>
-</ul>

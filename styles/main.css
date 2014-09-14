@@ -1,142 +1,44 @@
-/* Space out content a bit */
+/* BASIC */
+
+html, body {
+  overflow: hidden;
+}
+
 html {
   height: 100%
 }
 
 body {
-  padding-bottom: 20px;
   min-height: 100%;
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
+.sidePadding {
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+.container {
+  width: 100vw;
+  padding: 0px;
+}
+
+.header, .marketing, .footer {
   padding-left: 15px;
   padding-right: 15px;
 }
 
-/* Custom page header */
+/* HEADER */
 .header {
   border-bottom: 1px solid #e5e5e5;
 }
-/* Make the masthead heading the same height as the navigation */
+  /* Make the masthead heading the same height as the navigation */
 .header h3 {
   margin-top: 0;
   margin-bottom: 0;
   line-height: 40px;
   padding-bottom: 19px;
-}
-
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
-}
-
-.container-narrow > hr {
-  margin: 30px 0;
-}
-
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-}
-.jumbotron .btn {
-  font-size: 21px;
-  padding: 14px 24px;
-}
-
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-}
-.marketing p + h4 {
-  margin-top: 28px;
-}
-
-
-/* CUSTOM FUN STUFF */
-.dropItems {
-  cursor: pointer;
-  min-width:100px;
-  font-size: 15px;
-}
-
-.btn-default {
-  min-width: 100px;
-}
-
-.btn {
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-
-.img-large {
-  padding-top: 20px;
-  max-width: 100%;
-  max-height:80%;
-  height: auto;
-  width: auto\9; /* ie8 */
-}
-
-.tile {
-  float: left;
-  position: relative;
-  height: 100px;
-  cursor: pointer;
-  margin: 5px
-}
-
-.tileTitle {
-  padding-top: 15px;
-  padding-left: 30px;
-  text-align:left;
-  font-size:larger;
-  color:#F8F36C;
-}
-
-.gradient {
-  /*
-  background-image: url('../images/oregon/stars1.jpg')
-  */
-  /*
-    linear-gradient(
-      #55EFCB, #5BCAFF
-    );
-    */
-}
-
-.scroller {
-  margin-top: 20px;
-  max-height: 500px;
-  overflow: auto;
-  list-style-type: none;
-  padding: 0px;
-}
-  
-.block {
-  margin-bottom:300px;
-  margin-left: 100px;
-  margin-right: 100px;
-  margin-top: 100px;
-}
-
-.table-borderless th {
-  padding-right:200px;
-  vertical-align: top;
-  border: 0;
-}
-
-.table-borderless td {
-  padding:10px;
-  vertical-align: top;
-  border: 0;
 }
 
 .navbar, .navbar-static-top {
@@ -160,6 +62,206 @@ body {
   color: #F8F36C;
 }
 
+/* FOOTER */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* MENU */
+.dropItems {
+  cursor: pointer;
+  min-width:100px;
+  font-size: 15px;
+}
+
+/* BUTTON */
+.btn-default {
+  min-width: 100px;
+}
+
+.btn {
+  margin: 10px;
+}
+
+/* TABLE */
+.table-borderless th {
+  padding-right:200px;
+  vertical-align: top;
+  border: 0;
+}
+
+.table-borderless td {
+  padding:10px;
+  vertical-align: top;
+  border: 0;
+}
+
+/* PARALAX
+ *  height: 100vh sets height to be view port height
+ *  perspective: distance from user to z plane
+ *    height & perspective to make origin
+ *  overflow-y: auto allows scrolling to follow first element
+ *
+ *  parallax__layer pulls element out of scroll flow & fills its container
+ *    base and back transforms define 2 different speeds for moving along 
+ *
+ *  scale amount applifed to back:
+ *    1 + (translateZ * -1) / perspective)
+ *    1 + (-1 * -1) / 1 = 1 + 2 / 1 = 2
+ *
+ *  smaller z scale = slower scroll (can go negative)
+ *
+ *  http://blog.keithclark.co.uk/pure-css-parallax-websites/
+ */
+.parallax {
+  height: 500px; 
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-perspective: 300px;
+  perspective: 1px;
+  font-size: 200%;
+}
+
+.parallax__group {
+  position: relative;
+  height: 500px;
+  height: 100vh;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.parallax__layer--fore {
+  -webkit-transform: translateZ(90px) scale(.7);
+  transform: translateZ(90px) scale(.7);
+  z-index: 2;
+}
+
+.parallax__layer--base {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  z-index: 4;
+}
+
+.parallax__layer--back {
+  -webkit-transform: translateZ(-300px) scale(2);
+  transform: translateZ(-300px) scale(2);
+  z-index: 3;
+}
+
+/* centre the content in the parallax layers */
+.centeredContent {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* layering and colors */
+#group1 {
+  z-index: 5; /* over group 2 */
+  height: 60vh;
+}
+#group1 .parallax__layer--base {
+  background: rgb(102,204,102);
+}
+
+#group2 {
+  z-index: 3; /* under groups 1 and 3 */
+}
+#group2 .parallax__layer--back {
+  background: rgb(123,210,102);
+}
+
+#group3 {
+  z-index: 4; /* over group 2 and 4 */
+}
+#group3 .parallax__layer--base {
+  background: rgb(153,216,101);
+}
+
+#group4 {
+  z-index: 2; /* under group 3 and 5 */
+}
+#group4 .parallax__layer--back {
+  height: 120vh;
+  background: rgb(184,223,101);
+}
+
+#group5 {
+  height: 80vh;
+  z-index: 3; /* slide under group 3 and 5 */
+}
+#group5 .parallax__layer--base {
+  background: rgb(255,241,100);
+}
+
+/* VISUAL ELEMENTS */
+.img-large {
+  padding-top: 20px;
+  max-width: 100%;
+  max-height:80%;
+  height: auto;
+  width: auto\9; /* ie8 */
+}
+
+.tile {
+  float: left;
+  position: relative;
+  height: 130px;
+  width: 130px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.tileTitle {
+  padding-top: 15px;
+  padding-left: 30px;
+  text-align:left;
+  font-size:larger;
+  color:#F8F36C;
+}
+
+.block {
+  margin-bottom:300px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 100px;
+}
+
+.gradient {
+  /*
+  background-image: url('../images/oregon/stars1.jpg')
+  */
+  /*
+    linear-gradient(
+      #55EFCB, #5BCAFF
+    );
+    */
+}
+
+a {
+  color: #4EA138;
+}
+
+.scroller {
+  margin-top: 20px;
+  max-height: 500px;
+  overflow: auto;
+  list-style-type: none;
+  padding: 0px;
+}
 
 
 /* Responsive: Portrait tablets and up */
