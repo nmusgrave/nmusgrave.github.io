@@ -3,7 +3,7 @@ personalSiteApp.controller('dashboardController', function($scope, $q, $http) {
   var feedContents;
   var maxFeed = 100;
   
-  $scope.feeds = [
+  $scope.wsj = [
     { Source: 'WSJ',
       Category: 'Tech',
       URL: 'http://online.wsj.com/xml/rss/3_7455.xml',
@@ -15,7 +15,9 @@ personalSiteApp.controller('dashboardController', function($scope, $q, $http) {
     { Source: 'WSJ',
       Category: 'World',
       URL: 'http://online.wsj.com/xml/rss/3_7085.xml',
-      Icon: 'fa-globe' },
+      Icon: 'fa-globe' }
+    ];
+  $scope.seattleTimes = [
     { Source: 'Seattle Times',
       Category: 'Biz/Tech',
       URL: 'http://seattletimes.com/rss/businesstechnology.xml',
@@ -23,7 +25,9 @@ personalSiteApp.controller('dashboardController', function($scope, $q, $http) {
     { Source: 'Seattle Times',
       Category: 'Local',
       URL: 'http://seattletimes.com/rss/localnews.xml',
-      Icon: 'fa-tree'},
+      Icon: 'fa-tree'}
+    ];
+  $scope.theStranger = [
     { Source: 'The Stranger',
       Category: 'Music',
       URL: 'http://www.thestranger.com/seattle/Rss.xml?section=307',
@@ -35,12 +39,15 @@ personalSiteApp.controller('dashboardController', function($scope, $q, $http) {
       Category: 'Blogs',
       URL: 'http://www.thestranger.com/seattle/Rss.xml?categoryType=blog',
       Icon: 'fa-pencil'},
+    ];
+  $scope.techCrunch =
     { Source: 'TechCrunch',
       Category: '',
       URL: 'http://feeds.feedburner.com/TechCrunch/',
-      Icon: 'fa-plug' },
+      Icon: 'fa-plug' };
+  $scope.wired = [
     { Source: 'Wired',
-      Category: '',
+      Category: 'Features',
       URL: 'http://feeds.wired.com/wired/index',
       Icon: 'fa-plug'},
     { Source: 'Wired',
@@ -130,7 +137,6 @@ personalSiteApp.controller('dashboardController', function($scope, $q, $http) {
         $scope.weather = data;
       }
     );
-    $scope.switchFeed($scope.feeds[0].URL);
   };
   
   init();
