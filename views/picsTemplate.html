@@ -1,10 +1,10 @@
 <div class="sidePadding row">
-  <div class="col-sm-7">
+  <div class="col-sm-8">
     <img src="{{photoDir}}/{{current}}" class="img-large">
   </div>
-  <div class="col-sm-5">
-    <div class="row">
-      <div ng-repeat="link in pics" class="col-md-4" style="width:150px">
+  <div class="col-sm-4">
+    <div class="row tileScroll">
+      <div ng-repeat="link in pics" class="col-xs-3">
         <img src="{{iconDir}}/{{link}}" class="tile" ng-click="setLink(link)">
       </div>
     </div>

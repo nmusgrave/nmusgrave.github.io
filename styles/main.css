@@ -1,9 +1,4 @@
 /* BASIC */
-
-html, body {
-  overflow: hidden;
-}
-
 html {
   height: 100%
 }
@@ -116,6 +111,7 @@ body {
  *  http://blog.keithclark.co.uk/pure-css-parallax-websites/
  */
 .parallax {
+  overflow: hidden;
   height: 500px; 
   height: 100vh;
   overflow-x: hidden;
@@ -211,9 +207,9 @@ body {
 .img-large {
   padding-top: 20px;
   max-width: 100%;
-  max-height:80%;
   height: auto;
   width: auto\9; /* ie8 */
+  padding-bottom: 20px;
 }
 
 .tile {
@@ -223,6 +219,11 @@ body {
   width: 130px;
   cursor: pointer;
   margin: 10px;
+}
+
+.tileScroll {
+  overflow-y: scroll;
+  height:80vh;"
 }
 
 .tileTitle {
@@ -281,6 +282,10 @@ a {
   .jumbotron {
     border-bottom: 0;
   }
+  
+  .col-xs-3 {
+    min-width: 150px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -296,4 +301,12 @@ a {
     border: 0;
   }
   
+  .img-large {
+    padding-bottom: 20px;
+  }
+  
+  .tile {
+    height:70px;
+    width:70px;
+  }
 }

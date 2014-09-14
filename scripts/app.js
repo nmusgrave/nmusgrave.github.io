@@ -33,7 +33,7 @@ personalSiteApp.config(function($routeProvider) {
             controller  : 'picProcController'
     })
 });
-
+/*
 //http://akashagrawal.me/blog/2014/01/31/infinite-scroller-in-angularjs/
 personalSiteApp.directive('scroller', function () {
     return {
@@ -52,3 +52,4 @@ personalSiteApp.directive('scroller', function () {
         }
     };
 });
+*/
