@@ -1,4 +1,4 @@
-var personalSiteApp = angular.module('personalSiteApp', ['ngRoute', 'ui.bootstrap', 'lrInfiniteScroll']);
+var personalSiteApp = angular.module('personalSiteApp', ['ngRoute', 'ui.bootstrap']);
 
 // configure routes
 personalSiteApp.config(function($routeProvider) {
