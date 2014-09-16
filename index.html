@@ -31,8 +31,10 @@
     <script src="scripts/vendor/jquery.js"></script>
     <script src="bootstrap-3.2.0-dist/js/bootstrap.js"></script>
     <script src="https://www.google.com/jsapi"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
     <script>
       google.load('feeds', '1');
+      google.load('visualization', '1', {packages: ['areachart']});
     </script>
     <!-- Controllers -->
     <script src="scripts/app.js"></script>
@@ -42,6 +44,7 @@
     <script src="scripts/controllers/PicMusicCtrl.js"></script>
     <script src="scripts/controllers/PicSeattleCtrl.js"></script>
     <script src="scripts/controllers/PicOregonCtrl.js"></script>
+    <script src="scripts/controllers/ShouldIBikeCtrl.js"></script>
     
 </body>
 </html>

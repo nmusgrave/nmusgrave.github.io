@@ -32,6 +32,10 @@ personalSiteApp.config(function($routeProvider) {
             templateUrl : 'views/picsTemplate.html',
             controller  : 'picProcController'
     })
+    .when('/shouldIBike', {
+            templateUrl : 'views/shouldIBike.html',
+            controller  : 'shouldIBikeController'
+    })
 });
 /*
 //http://akashagrawal.me/blog/2014/01/31/infinite-scroller-in-angularjs/
