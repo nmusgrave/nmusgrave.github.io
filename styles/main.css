@@ -165,6 +165,22 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.leftContent {
+  position: absolute;
+  left: 50vw;
+  top: 20%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.rightContent {
+  position: absolute;
+  left: 70vw;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 /* layering and colors */
 #group1 {
   z-index: 5; /* over group 2 */
