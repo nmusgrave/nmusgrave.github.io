@@ -1,30 +1,54 @@
 <div class="sidePadding">
-    <div class="row">
-        <div class="col-md-6">
+    <div class="row" style="padding-left: 15vw; padding-right: 15vw">
+        <div class="col-sm-4">
+            <h1>Should I bike?</h1>
+        </div>
+        <div class="col-sm-4">
             <form>
                 <input type="text" ng-model="start" placeholder="start"></input>
-                <input type="text" ng-model="end" placeholder="end"></input>
                 <br />
-                <button type="submit" class="btn btn-success" ng-click="bikeRoute()">
-                    <i class="fa fa-bicycle fa-5x"></i>
-                </button>
+                <input type="text" ng-model="end" placeholder="end"></input>                
             </form>
-            <p>{{result.legs[0].distance.text}}</p>
-            <p>{{result.legs[0].duration.text}}</p>
-            <p>{{max - min}} foot elevation change</p>
-            <div id="elevation_chart" style="width: 100%;"></div>
         </div>
-        <div class="col-md-6">
-            <div id="map-canvas" style="width:100%; height:200px"></div>
+        <div class="col-sm-4">
+            <button type="submit" class="btn btn-success" ng-click="bikeRoute()">
+                <i class="fa fa-bicycle fa-5x"></i>
+            </button>
         </div>
     </div>
-    
-    <h3>Factors to consider:</h3>
-    <ul>
-        <li>time of request (late at night = go shorter distances)</li>
-        <li>weather</li>
-        <li>traffic</li>
-        <li>elevation change</li>
-    </ul>
-
+    <h1 style="text-align: center; padding: 5vw;">{{message}}</h1>
+    <div class="row hidden-xs hidden-sm" style="padding-top: 60px" ui-if="showResults">
+        <div class="col-md-6" id="map-canvas" style="width:50%; height:200px"></div>
+        <div class="col-md-6" id="elevation_chart" style="width: 50%; height:220px"></div>
+    </div>
+    <div class="row" ng-show="showResults">
+        <div class="col-md-8">
+            <div class="row">
+                <div class="col-xs-6">
+                    <h4>{{start}} at departure</h4>
+                    <div class="hidden-xs hidden-sm">
+                        <p>temp: {{startWeather.temp.english}} F</p>
+                        <p>wind: {{startWeather.wspd.english}} mph</p>
+                        <p>{{startWeather.condition}}</p>
+                    </div>
+                    <img src="{{startWeather.icon_url}}" />
+                </div>
+                <div class="col-xs-6">
+                    <h4>{{end}} at arrival</h4>
+                    <div class="hidden-xs hidden-sm">
+                        <p>temp: {{endWeather.temp.english}} F</p>
+                        <p>wind: {{endWeather.wspd.english}} mph</p>
+                        <p>{{endWeather.condition}}</p>
+                    </div>
+                    <img src="{{endWeather.icon_url}}" />
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <p>arrive: {{endWeather.FCTTIME.civil}}, {{endWeather.FCTTIME.weekday_name}} {{endWeather.FCTTIME.mon_abbrev}} {{endWeather.FCTTIME.mday}}</p>
+            <p>distance: {{result.legs[0].distance.text}}.</p>
+            <p>duration: {{result.legs[0].duration.text}}</p>
+            <p>elevation change: {{max - min}} feet max</p>
+        </div>
+    </div>  
 </div>
