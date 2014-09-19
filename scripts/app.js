@@ -36,6 +36,10 @@ personalSiteApp.config(function($routeProvider) {
             templateUrl : 'views/shouldIBike.html',
             controller  : 'shouldIBikeController'
     })
+    .when('/musicSearch', {
+            templateUrl : 'views/musicSearch.html',
+            controller  : 'musicSearchController'
+    })
 });
 /*
 //http://akashagrawal.me/blog/2014/01/31/infinite-scroller-in-angularjs/

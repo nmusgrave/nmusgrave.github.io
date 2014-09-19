@@ -50,5 +50,11 @@
             <p>duration: {{result.legs[0].duration.text}}</p>
             <p>elevation change: {{max - min}} feet max</p>
         </div>
-    </div>  
+    </div>
+    
+    <div ng-show="showResult" style="padding-top:100px">
+        <p>Weather data provided by
+            <img src="http://icons.wxug.com/logos/PNG/wundergroundLogo_4c_horz.png" style="width:120px; padding-left:20px"/>
+        </p>
+    </div>
 </div>

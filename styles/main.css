@@ -7,6 +7,7 @@ body {
   min-height: 100%;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 .sidePadding {
@@ -112,14 +113,13 @@ body {
  *  http://blog.keithclark.co.uk/pure-css-parallax-websites/
  */
 .parallax {
-  overflow: hidden;
   height: 500px; 
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-perspective: 300px;
-  perspective: 1px;
-  font-size: 200%;
+  perspective: 300px;
+  font-size: 100%;
 }
 
 .parallax__group {
@@ -167,7 +167,7 @@ body {
 
 .leftContent {
   position: absolute;
-  left: 50vw;
+  left: 20vw;
   top: 20%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -181,27 +181,49 @@ body {
   transform: translate(-50%, -50%);
 }
 
+
 /* layering and colors */
+.color1 {
+  background: #72D241;
+}
+
+.color2 {
+  background: #72D241;
+}
+
+.color3 {
+  background: #9AEB71;
+}
+
+.color4 {
+  background: #78BF25;
+}
+
+.color5 {
+  background: #BCF657;
+}
+
 #group1 {
   z-index: 5; /* over group 2 */
   height: 60vh;
 }
 #group1 .parallax__layer--base {
-  background: rgb(102,204,102);
+  /*background: #72D241;*/
 }
 
 #group2 {
-  z-index: 3; /* under groups 1 and 3 */
+  z-index: 1; /* under groups 1 and 3 */
 }
+
 #group2 .parallax__layer--back {
-  background: rgb(123,210,102);
+  /*background: #72D241;*/
 }
 
 #group3 {
-  z-index: 4; /* over group 2 and 4 */
+  z-index: 3; /* over group 2 and 4 */
 }
 #group3 .parallax__layer--base {
-  background: rgb(153,216,101);
+  /*background: #9AEB71;*/
 }
 
 #group4 {
@@ -209,15 +231,15 @@ body {
 }
 #group4 .parallax__layer--back {
   height: 120vh;
-  background: rgb(184,223,101);
+  /*background: #78BF25;*/
 }
 
 #group5 {
   height: 80vh;
-  z-index: 3; /* slide under group 3 and 5 */
+  z-index: 4; /* slide under group 3 and 5 */
 }
 #group5 .parallax__layer--base {
-  background: rgb(255,241,100);
+  /*background: #BCF657;*/
 }
 
 /* VISUAL ELEMENTS */
@@ -253,13 +275,6 @@ input {
   text-align:left;
   font-size:larger;
   color:#F8F36C;
-}
-
-.block {
-  margin-bottom:300px;
-  margin-left: 100px;
-  margin-right: 100px;
-  margin-top: 100px;
 }
 
 .gradient {
