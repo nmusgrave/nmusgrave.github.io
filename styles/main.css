@@ -7,7 +7,6 @@ body {
   min-height: 100%;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  overflow: hidden;
 }
 
 .sidePadding {
@@ -298,6 +297,7 @@ a {
   overflow: auto;
   list-style-type: none;
   padding: 0px;
+  padding-bottom:20vh;
 }
 
 
