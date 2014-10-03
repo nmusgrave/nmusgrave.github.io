@@ -4,7 +4,7 @@ personalSiteApp.controller('picOregonController', function($scope) {
   
   $scope.photoDir = 'images/oregon';
   $scope.iconDir = 'icons/oregon';
-  $scope.pics = [ 'stars1.jpg','pdx2.jpg','pdx1.jpg','gorgeB&W.jpg','moss.JPG','road.jpg','trees.jpg','beachView.jpg','haystack.jpg','rockFormation.jpg','rocks.jpg','water.jpg' ];
+  $scope.pics = [ 'pdx2.jpg','pdx1.jpg','gorgeB&W.jpg','moss.JPG','road.jpg','trees.jpg','beachView.jpg','haystack.jpg','rockFormation.jpg','rocks.jpg','water.jpg' ];
   
   $scope.setLink = function(link) {
     $scope.current = link;

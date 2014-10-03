@@ -166,7 +166,7 @@ body {
 
 .leftContent {
   position: absolute;
-  left: 20vw;
+  left: 35vw;
   top: 20%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -242,6 +242,10 @@ body {
 }
 
 /* VISUAL ELEMENTS */
+.coverPhoto {
+  height: 100%;
+  padding-bottom: 150px;
+}
 input {
   padding: 5px;
   margin: 10px;
@@ -299,7 +303,10 @@ a {
   padding: 0px;
   padding-bottom:20vh;
 }
-
+.fa-large {
+  font-size: 7em;
+  padding: 20px;
+}
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
@@ -325,7 +332,11 @@ a {
 }
 
 @media screen and (max-width: 768px) {
-  /* Remove the padding we set earlier */  
+  /* Remove the padding we set earlier */
+  .coverPhoto {
+    height: 70%;
+    padding-bottom: 0px;
+  }
   .block {
     margin: 10px;
     margin-bottom: 100px;
