@@ -1,0 +1,39 @@
+<div class="sidePadding" style="padding-top:75px">
+    <div class="col-sm-3">
+        <form>
+            <input type="number" ng-model="age" placeholder="age"></input>
+            <br />
+            <input type="number" ng-model="weight" placeholder="weight (lbs)"></input>
+            <p>Have you consumed any caffeine yet?</p>
+            <input type="radio" ng-model="have_consumed" value="yes">Yes
+            <br />
+            <input type="radio" ng-model="have_consumed" value="no">No
+            <br />
+            <div ng-show="have_consumed == 'yes'">
+                <input type="number" ng-model="consumed" placeholder="consumed (mg)"></input>
+                <br />
+                <input type="number" ng-model="t_0" placeholder="hours ago"></input>
+                <br />
+            </div>
+        </form>
+        <button type="submit" class="btn btn-success" ng-click="calculate()">
+            <i class="fa fa-coffee fa-3x"></i>
+        </button>
+    </div>
+    <div class="col-sm-9" style=" height:400px">
+
+        <nvd3-line-chart ui-if="showChart" ng-if="showChart"
+            data="data"
+            id="exampleId"
+            showXAxis="false"
+            showYAxis="false"
+            useInteractiveGuideLine="true"
+            tooltips="false"
+            xAxisLabel="Hours"
+            	showLegend="true">
+            <svg></svg>
+        </nvd3-line-chart>
+    </div>
+</div>
+
+

@@ -1,4 +1,4 @@
-var personalSiteApp = angular.module('personalSiteApp', ['ngRoute', 'ui.bootstrap']);
+var personalSiteApp = angular.module('personalSiteApp', ['ngRoute', 'ui.bootstrap', 'nvd3ChartDirectives']);
 
 // configure routes
 personalSiteApp.config(function($routeProvider) {
@@ -39,6 +39,10 @@ personalSiteApp.config(function($routeProvider) {
     .when('/musicSearch', {
             templateUrl : 'views/musicSearch.html',
             controller  : 'musicSearchController'
+    })
+    .when('/caffeine', {
+            templateUrl : 'views/caffeine.html',
+            controller  : 'caffeineController'
     })
 });
 

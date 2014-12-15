@@ -1,5 +1,19 @@
-ng-seed
+Personal Website
 =======
 
-Bare-bones angular &amp; bootstrap web app
-http://0.0.0.0:8000/#/dashboard
+Iterations
+< fall 2013
+    static HTML
+Winter 2013
+    Django
+Spring 2014
+    scrapped Django backend, back to static HTML
+Summer 2014
+    Angular JS
+Fall 2014
+    Angular & Polymer
+
+Launch
+$    python -m SimpleHTTPServer
+then goto
+    http://0.0.0.0:8000/#/

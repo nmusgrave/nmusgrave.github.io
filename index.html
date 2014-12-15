@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="bootstrap-3.2.0-dist/css/bootstrap.min.css" >
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/main.css">
+    
+    <link rel="stylesheet" href="bower_components/nvd3/nv.d3.css"/>
+
   </head>
   <body class="gradient" ng-app="personalSiteApp">
     
@@ -36,6 +39,10 @@
       google.load('feeds', '1');
       google.load('visualization', '1', {packages: ['areachart']});
     </script>
+    
+    <script src="bower_components/d3/d3.js"></script>
+    <script src="bower_components/nvd3/nv.d3.js"></script>
+    <script src="bower_components/angularjs-nvd3-directives/dist/angularjs-nvd3-directives.js"></script>
     <!-- Controllers -->
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/MainCtrl.js"></script>
@@ -46,6 +53,7 @@
     <script src="scripts/controllers/PicOregonCtrl.js"></script>
     <script src="scripts/controllers/ShouldIBikeCtrl.js"></script>
     <script src="scripts/controllers/MusicSearchCtrl.js"></script>
+    <script src="scripts/controllers/CaffeineCtrl.js"></script>
     
 </body>
 </html>
