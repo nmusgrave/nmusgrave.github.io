@@ -5,9 +5,9 @@
             <br />
             <input type="number" ng-model="weight" placeholder="weight (lbs)"></input>
             <p>Have you consumed any caffeine yet?</p>
-            <input type="radio" ng-model="have_consumed" value="yes">Yes
+            <input type="radio" ng-model="have_consumed" value="yes">  Yes
             <br />
-            <input type="radio" ng-model="have_consumed" value="no">No
+            <input type="radio" ng-model="have_consumed" value="no">  No
             <br />
             <div ng-show="have_consumed == 'yes'">
                 <input type="number" ng-model="consumed" placeholder="consumed (mg)"></input>
@@ -20,20 +20,20 @@
             <i class="fa fa-coffee fa-3x"></i>
         </button>
     </div>
-    <div class="col-sm-9" style=" height:400px">
-
-        <nvd3-line-chart ui-if="showChart" ng-if="showChart"
-            data="data"
-            id="exampleId"
-            showXAxis="false"
-            showYAxis="false"
-            useInteractiveGuideLine="true"
-            tooltips="false"
-            xAxisLabel="Hours"
-            	showLegend="true">
-            <svg></svg>
-        </nvd3-line-chart>
+    <div class="col-sm-9">
+        <p>You currently have {{curCaffeine}} mgs of caffeine in your system.</p>
+        <p>{{maxCaffeine}} mgs of caffeine is dangerous.</p>
+        <p>Your smallest optimal caffeine level is {{minCaffeine}} mgs.</p>
+        <p>Your next dose of caffeine should be {{nextCaffeine}} mgs, in {{doseTime}} hrs.</p>
     </div>
+    <p>
+      <code is="math-tex">C(t) = A * C(0) \frac{e^{-Et} - e^{-At}}{A - E}</code>
+      <br />
+      <code is="math-tex">t = \frac{ ln(\frac{ C(t) * (A-E) }{A * C(0) }}{ln(e^{-E} - e^{-A})}</code>
+    </p>
+
+
+</p>
 </div>
 
 
