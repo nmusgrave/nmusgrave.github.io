@@ -4,6 +4,8 @@
             <input type="number" ng-model="age" placeholder="age"></input>
             <br />
             <input type="number" ng-model="weight" placeholder="weight (lbs)"></input>
+            <br />
+            <input type="number" ng-model="duration" placeholder="stay awake for... (hrs)"></input>
             <p>Have you consumed any caffeine yet?</p>
             <input type="radio" ng-model="have_consumed" value="yes">  Yes
             <br />
@@ -20,20 +22,32 @@
             <i class="fa fa-coffee fa-3x"></i>
         </button>
     </div>
+
     <div class="col-sm-9">
         <p>You currently have {{curCaffeine}} mgs of caffeine in your system.</p>
         <p>{{maxCaffeine}} mgs of caffeine is dangerous.</p>
         <p>Your smallest optimal caffeine level is {{minCaffeine}} mgs.</p>
         <p>Your next dose of caffeine should be {{nextCaffeine}} mgs, in {{doseTime}} hrs.</p>
+        <p>
+          <code is="math-tex">C(t) = A * C(0) \frac{e^{-Et} - e^{-At}}{A - E}</code>
+          <br />
+          <code is="math-tex">t = \frac{ ln(\frac{ C(t) * (A-E) }{A * C(0) }}{ln(e^{-E} - e^{-A})}</code>
+        </p>
+
+        <nvd3-line-chart ui-if="showChart" ng-if="showChart"
+            data="data"
+            id="exampleId"
+            width = "550"
+            height = "350"
+            showXAxis="false"
+            showYAxis="false"
+            useInteractiveGuideLine="true"
+            tooltips="false"
+            xAxisLabel="Hours"
+                showLegend="true">
+            <svg></svg>
+        </nvd3-line-chart>
     </div>
-    <p>
-      <code is="math-tex">C(t) = A * C(0) \frac{e^{-Et} - e^{-At}}{A - E}</code>
-      <br />
-      <code is="math-tex">t = \frac{ ln(\frac{ C(t) * (A-E) }{A * C(0) }}{ln(e^{-E} - e^{-A})}</code>
-    </p>
-
-
-</p>
 </div>
 
 
