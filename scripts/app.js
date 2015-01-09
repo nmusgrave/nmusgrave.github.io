@@ -1,4 +1,4 @@
-var personalSiteApp = angular.module('personalSiteApp', ['ngRoute', 'ui.bootstrap', 'nvd3ChartDirectives']);
+var personalSiteApp = angular.module('personalSiteApp', ['ngRoute', 'ui.bootstrap']); //nvd3ChartDirectives
 
 // configure routes
 personalSiteApp.config(function($routeProvider) {

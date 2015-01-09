@@ -2,3 +2,5 @@ node_modules
 dist
 .tmp
 .sass-cache
+bower_components/angularjs-nvd3-directives
+math-tex
