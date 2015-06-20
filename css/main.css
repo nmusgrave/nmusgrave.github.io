@@ -98,6 +98,13 @@ body {
 code {
   color: "black";
 }
+.backgroundPhoto{
+  background-image: url(../images/seattle/moss.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
 .coverPhoto {
   height: 100%;
   padding-bottom: 150px;
@@ -135,22 +142,12 @@ input {
   font-size:larger;
   color:#F8F36C;
 }
-
-.gradient {
-  /*
-  background-image: url('../images/oregon/stars1.jpg')
-  */
-  /*
-    linear-gradient(
-      #55EFCB, #5BCAFF
-    );
-    */
+h1 {
+  color: white;
 }
-
 a {
   color: #4EA138;
 }
-
 .scroller {
   margin-top: 20px;
   max-height: 500px;
@@ -185,6 +182,14 @@ a {
   .col-xs-3 {
     min-width: 150px;
   }
+
+  .backgroundPhoto{
+    background-image: url(../images/seattle/mossSmall.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -211,5 +216,12 @@ a {
   .tile {
     height:70px;
     width:70px;
+  }
+  .backgroundPhoto{
+    background-image: url(../images/seattle/mossSmaller.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
   }
 }

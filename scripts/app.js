@@ -32,14 +32,6 @@ personalSiteApp.config(function($routeProvider) {
             templateUrl : 'views/picsTemplate.html',
             controller  : 'picProcController'
     })
-    .when('/shouldIBike', {
-            templateUrl : 'views/shouldIBike.html',
-            controller  : 'shouldIBikeController'
-    })
-    .when('/musicSearch', {
-            templateUrl : 'views/musicSearch.html',
-            controller  : 'musicSearchController'
-    })
     .when('/caffeine', {
             templateUrl : 'views/caffeine.html',
             controller  : 'caffeineController'
